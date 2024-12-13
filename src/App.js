@@ -4,7 +4,10 @@ import Home from './components/Home';
 import Lyrics from './components/Lyrics';
 import Login from './components/Login';
 import Register from './components/Register';
+import AddLyrics from './components/AddLyrics';
 
+<Route path="/add-Lyrics"
+component={AddLyrics} />
 function App() {
   return (
     <Router>
