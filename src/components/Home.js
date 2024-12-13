@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [lyrics, setLyrics] = useState([]);
@@ -15,10 +16,11 @@ const Home = () => {
   return (
     <div>
       <h2>Lyrics List</h2>
+      <Link to="/add-lyrics">Add Lyrics</Link>
       <ul>
         {lyrics.map((lyric) => (
           <li key={lyric.id}>
-            <a href={`/lyrics/${lyric.id}`}>{lyric.title} by {lyric.artist}</a>
+            <Link to={`/lyrics/${lyric.id}`}>{lyric.title} by {lyric.artist}</Link>
           </li>
         ))}
       </ul>
@@ -27,3 +29,4 @@ const Home = () => {
 };
 
 export default Home;
+
